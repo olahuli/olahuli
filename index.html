@@ -2,19 +2,36 @@
 <html>
 <head>
 	<title>Olahuli</title>
+	<!-- BootStrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	<!-- Jquery CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-
-<h1>TEST TUBE</h1>
-
-
-HELLO PAT
-
-
-<<p>jkdbkhvkfejdnekljfgndfkjgnfskjgdskjg
-vkhdskhfbdfkjfwfkjghdfskjghdsfjklvsdfkjh
-sdjvndfskhbvdfskjfvhdsfkjvhsdkjvhdsjk</p>
-Test
-
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div class="page-header">
+					<h1>OlaHuli<small> - Enter your search</small></h1>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4 col-md-offset-4">
+				<form id="search-bar">
+      				<label for="search-bar-title">Enter Search:</label>
+      				<input type="text" id="wiki-search-input"><br>
+      				<!-- Button triggers new video game to be added -->
+      				<input id="add-wiki-data" type="submit" value="Submit Search">
+    			</form>
+			</div>
+		</div>
+	</div>
+	<script src="assets/javascript/olahuli.js"></script>
 </body>
 </html>
