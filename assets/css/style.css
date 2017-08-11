@@ -6,7 +6,16 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
-
+h1{
+  color: black;
+  font-weight: bold;
+  opacity: 1;
+}
+h3{
+  color: black;
+  font-weight: bold;
+  opacity: 1;
+}
 .navigation
 {
 
@@ -22,6 +31,7 @@ body {
 	border-radius: 5px;
 	border-color: black;
 	border-style:solid;
+  opacity: 0.6;
 
 }
 .brand-name{
