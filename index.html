@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Olahuli</title>
-</head>
-<body>
+	<head>
+		<title>Olahuli</title>
+		<!-- BootStrap CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+		<!-- Jquery CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top navigation">
 
-<h1>TEST TUBE</h1>
+			<div class="container">
 
+				<button type="button" class="btn btn-default navbar-btn">Home</button>
+				<button type="button" class="btn btn-default navbar-btn">Search</button>
+				<button type="button" class="btn btn-default navbar-btn">About Us</button>
+				<div class="brand-name">
+					<a href='index.html' class='pull-left brand-font'><img src="assets/images/logo3.symbol.png"></a>
+				</div>
 
-HELLO PAT
+			</div>
 
-
-<<p>jkdbkhvkfejdnekljfgndfkjgnfskjgdskjg
-vkhdskhfbdfkjfwfkjghdfskjghdsfjklvsdfkjh
-sdjvndfskhbvdfskjfvhdsfkjvhsdkjvhdsjk</p>
-Test
-
-</body>
+		</nav>
+		<div class = "container">
+			<div class = "row">
+				<div class = "col-md-12 header-space">
+					<div class = "row">
+						<div class = "col-md-12">
+							<div class="page-title">
+								<h1>OlaHuli</h1>
+							</div>
+						</div>
+					</div>
+					<div class = "row">
+						<div class = "col-md-12">
+							<div class="page-sub-title">
+								<h3>A Modern Wikipedia</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "col-md-12">
+					<form id="search-bar">
+						<label for="search-bar-title">Enter Search:</label>
+						<input type="text" id="wiki-search-input"><br>
+						<!-- Button triggers new video game to be added -->
+						<input id="add-wiki-data" type="submit" value="Submit Search">
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">@copyright 2017 Olahuli</p>
+			</div>
+		</footer>
+		<script src="assets/javascript/olahuli.js"></script>
+	</body>
 </html>
