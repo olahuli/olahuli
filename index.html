@@ -9,56 +9,135 @@
 		<!-- Jquery CDN -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets\font-awesome-4.7.0\css\font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top navigation">
-
 			<div class="container">
-
-				<button type="button" class="btn btn-default navbar-btn">Home</button>
-				<button type="button" class="btn btn-default navbar-btn">Search</button>
-				<button type="button" class="btn btn-default navbar-btn">About Us</button>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"></span> Home</a></li>
+					<li><a href="#"></span> Search</a></li>
+					<li><a href="#"></span> About Us</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
 				<div class='navbar-header brand-name'>
 					<a href='index.html' class='pull-left'><img src="assets/images/logo3.symbol.png"></a>
 				</div>
 			</div>
-
 		</nav>
 		<div class = "container">
 			<div class = "row">
 				<div class = "col-md-12 header-space">
 					<div class = "row">
-						<div class = "col-md-12">
+						<div class = "col-md-8">
 							<div class="page-title">
-								<h1>OlaHuli</h1>
 							</div>
 						</div>
 					</div>
 					<div class = "row">
 						<div class = "col-md-12">
 							<div class="page-sub-title">
-								<h3>A Modern Wikipedia</h3>
+								A Modern Wikipedia
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class = "row">
-				<div class = "col-md-12">
-					<form id="search-bar">
-						<label for="search-bar-title">Enter Search:</label>
-						<input type="text" id="wiki-search-input"><br>
-						<!-- Button triggers new video game to be added -->
-						<input id="add-wiki-data" type="submit" value="Submit Search">
-					</form>
+				<div class = "col-md-12 search-bar-box">
+					<div class="form-group search-bar">
+						<label for="inputlg"></label>
+						<span class="fa fa-search fa-5x"></span>
+						<input class="form-control input-lg wiki-search-input" id="inputlg" type="text" placeholder="Enter text..">
+						<input type="button" class="btn btn-info add-search-data" value="Search">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "container">
+			<div class = "row vdivide olahuli-contents">
+				<div class = "col-md-3 col-md-offset-1 olahuli-search">
+					<div class = "row">
+						<div class = "col-md-12 search-pic">
+						</div>
+					</div>
+					<div class = "row">
+						<div class = "col-md-12 search-text">
+							<h1>Search.</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "col-md-3 col-md-offset-1 olahuli-enjoy">
+					<div class = "row">
+						<div class = "col-md-12 enjoy-pic">
+						</div>
+					</div>
+					<div class = "row">
+						<div class = "col-md-6 enjoy-text">
+							<h1>Enjoy.</h1>
+						</div>
+					</div>
+				</div>
+				<div class = "col-md-3 col-md-offset-1 olahuli-repeat">
+					<div class = "row">
+						<div class = "col-md-12 repeat-pic">
+						</div>
+					</div>
+					<div class = "row">
+						<div class = "col-md-12 repeat-text">
+							<h1>Repeat.</h1>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
-				<p class="text-muted">@copyright 2017 Olahuli</p>
+				<div class = "row">
+					<div class = "col-md-1 footer-logo">
+						<a href='index.html' class='pull-left'><img src="assets/images/logo3.symbol.png"></a>
+					</div>
+					<div class = "col-md-3 col-md-offset-1  company-info">
+						<div class = "row">
+							<div class = "col-md-12 company-info-title">
+								<h5>Olahuli Inc.</h5>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md-12">
+								Palo Alto, Ca
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md-12">
+								hello@olahuli.com
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md-12">
+								www.olahuli.com
+							</div>
+						</div>	
+					</div>
+					<div class = "col-md-2 ">
+						<p class="text-muted">@copyright 2017 Olahuli</p>
+					</div>
+					<div class = "col-md-5  social-icons ">
+						<div class = "col-md-1 col-md-offset-9">
+							<i class="fa fa-github fa-2x"></i>
+						</div>
+						<div class = "col-md-1 ">
+							<i class="fa fa-linkedin-square fa-2x "></i>
+						</div>
+						<div class = "col-md-1 ">
+							<i class="fa fa-stack-overflow fa-2x"></i>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<script src="assets/javascript/olahuli.js"></script>
