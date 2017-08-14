@@ -1,8 +1,8 @@
 
-$(document).on("click", "#button", function(){
-  var input = $("#textInput").val().trim();
+$(document).on("click", ".add-search-data", function(){
+  var input = $(".wiki-search-input").val().trim();
   var gettyApi = "9pmqn85smrhhhx3wq5zjhgk7";
-
+  console.log(input);
   var firstURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+ input +"&type=video&key=AIzaSyB4_u1AG7P6ykJ68p080pjfIpjjZk7SJP0";
   var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=best&phrase=" + input;
   $.ajax({
@@ -18,7 +18,7 @@ $(document).on("click", "#button", function(){
     //   newDiv.append(vidTag);
     // }
     //$("#htmlTag").append(newDiv);
-    console.log(response.items[i].id.videoId);
+    console.log(response);
 
   });
 
@@ -41,4 +41,4 @@ $(document).on("click", "#button", function(){
   });
 
 
-}));
+});
