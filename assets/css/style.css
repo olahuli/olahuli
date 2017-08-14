@@ -18,14 +18,14 @@ body {
 	font-style: "didot";
 }
 .header-space{
-	margin-top: 140px;
+
 	height: 640px;
 	background-image: url("../../assets/images/olahuli-bg-opacity.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	border-radius: 20px;
+/*	border-radius: 20px;
 	border-color: black;
-	border-style:solid;
+	border-style:solid;*/
 	margin-bottom: 80px;
 
 
@@ -53,12 +53,12 @@ body {
 .page-sub-title{
 	width:100%;
 	background-color:#FEAF1A;
-	border-radius: 5px;
+/*	border-radius: 5px;*/
 	color:white;
 	font-size: 45px;
 	font-family: "didot";
-	border-color: black;
-	border-style:solid;
+/*	border-color: black;
+	border-style:solid;*/
 	vertical-align: middle;
 	text-align: center;
 }
@@ -66,9 +66,9 @@ body {
 /*-----------------------------Search Bar CSS--------------------------------------*/
 
 .search-bar-box{
-	border-color: black;
+/*	border-color: black;
 	border-style:solid;
-	border-radius: 20px;
+	border-radius: 20px;*/
 	height: 140px;
 	margin-bottom:80px;
 	background-color: #F7F7F9;
