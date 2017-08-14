@@ -10,15 +10,14 @@ $(document).on("click", ".add-search-data", function(){
     method: "GET"
   }).done(function(response){
 
-    var newDiv = $("<div class='col-md-3' id ='youtube'>");
+    var newDiv = $("<div class='row' id ='youtube'>");
     for(i = 0; i < response.items.length; i++){
       var videos = response.items[i].id.videoId;
-      var vidTag = $("<iframe width='200' height='150' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
+      var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
       newDiv.append(vidTag);
     }
     $(".youtube-view").html(newDiv);
     console.log(response);
-
   });
 
   $.ajax({
@@ -29,10 +28,11 @@ $(document).on("click", ".add-search-data", function(){
     }
 
   }).done(function(response){
-    var newDiv = $("<div class='col-md-3' id='getty'>");
-    for(i = 0; i < 9; i++){
+
+    var newDiv = $("<div class='row' id='getty'>");
+    for(i = 0; i < 8; i++){
       var image = response.images[i].display_sizes[0].uri;
-      var imageTag = $("<img width='200' height='150'>").attr("src", image);
+      var imageTag = $("<img width='250' height='200'>").attr("src", image);
       newDiv.append(imageTag);
     }
     $(".getty-view").html(newDiv);
