@@ -32,7 +32,7 @@ $(document).on("click", ".add-search-data", function(){
     var newDiv = $("<div class='col-md-3' id='getty'>");
     for(i = 0; i < 9; i++){
       var image = response.images[i].display_sizes[0].uri;
-      var imageTag = $("<img>").attr("src", image);
+      var imageTag = $("<img width='200' height='150'>").attr("src", image);
       newDiv.append(imageTag);
     }
     $(".getty-view").html(newDiv);
