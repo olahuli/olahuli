@@ -41,4 +41,11 @@ $(document).on("click", "#button", function(){
   });
 
 
-}));
+});
+
+
+
+function myFunction() {
+    var elmnt = document.getElementById("search-bar");
+    elmnt.scrollIntoView();
+}
