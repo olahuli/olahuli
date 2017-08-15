@@ -16,13 +16,15 @@ $(document).on("click", ".add-search-data", function(){
     }
 
   }).done(function(response){
-    var newDiv = $("<div class='row' id='getty'>");
+    
     for(i = 0; i < 8; i++){
+      var newDiv = $("<div class ='col-xs-3'>");
       var image = response.images[i].display_sizes[0].uri;
       var imageTag = $("<img width='250' height='200'>").attr("src", image);
       newDiv.append(imageTag);
-    }
-    $(".getty-view").html(newDiv);
+    
+    $(".getty-view").append(newDiv);
+  }
     console.log(response);
   });
 
@@ -30,13 +32,15 @@ $(document).on("click", ".add-search-data", function(){
     url: firstURL,
     method: "GET"
   }).done(function(response){
-    var newDiv = $("<div class='row' id ='youtube'>");
+
     for(i = 0; i < response.items.length; i++){
+          var newDiv = $("<div class ='col-xs-3'>");
       var videos = response.items[i].id.videoId;
       var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
       newDiv.append(vidTag);
-    }
-    $(".youtube-view").html(newDiv);
+    
+    $(".youtube-view").append(newDiv);
+  }
     console.log(response);
   });
 
@@ -49,14 +53,15 @@ $(document).on("click", ".add-search-data", function(){
      $(".wiki-view").empty();
 
      var newDiv = $("<div class ='col-xs-12 search-div'>");
-
+     var headerDiv = $("<div class ='col-xs-3 title-div'>");
      var title = response.parse.title;
      var content = response.parse.text["*"];
 
-     newDiv.append(title);
+     headerDiv.append(title);
      newDiv.append(content);
 
      $(".wiki-view").append(newDiv);
+     $("#getty-container").prepend(headerDiv);
      console.log(response);
   });
 
