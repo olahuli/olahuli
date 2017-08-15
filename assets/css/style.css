@@ -18,11 +18,14 @@ body {
 	font-style: "didot";
 }
 .header-space{
-	margin-top: 0%;
+
 	height: 640px;
 	background-image: url("../../assets/images/olahuli-bg-opacity.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+/*	border-radius: 20px;
+	border-color: black;
+	border-style:solid;*/
 	margin-bottom: 80px;
 
 
@@ -41,21 +44,21 @@ body {
 	margin-top: -80px;
 	height:500px;
 	font-style: "didot";
-	
+
 	background-image: url("../../assets/images/olahuli.logo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	
+
 }
 .page-sub-title{
 	width:100%;
-
 	background-color:#FEAF1A;
-	border-radius: 5px;
+/*	border-radius: 5px;*/
 	color:white;
 	font-size: 45px;
 	font-family: "didot";
-
+/*	border-color: black;
+	border-style:solid;*/
 	vertical-align: middle;
 	text-align: center;
 }
@@ -63,39 +66,92 @@ body {
 /*-----------------------------Search Bar CSS--------------------------------------*/
 
 .search-bar-box{
-	border-color: grey;
+/*	border-color: black;
 	border-style:solid;
-	border-radius: 20px;
-	
+	border-radius: 20px;*/
+	height: 140px;
+	margin-bottom:80px;
 	background-color: #F7F7F9;
 }
 
 .search-bar{
 	margin-bottom:80px;
 	position: relative;
+	display: block;
 }
 
-.fa-search { 
+.fa-search {
 	vertical-align: middle;
 	position: relative;
 	top: 24px;
 	left: 7px;
 	font-size: 15px;
-	padding-top: 0px;
+	padding-top: 5px;
+}
+
+#inputlg
+{
+	margin-bottom: 20px;
+	
 }
 
 .wiki-search-input
 {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 20px;
+	
 }
 
 .add-search-data{
-	margin-top: 15px;
+	width:10%;
+	/*margin-top: 15px;*/
 	display: block;
     margin: auto;
     font-family: "didot";
+}
+
+/*---------------------------------Olahuli Results Search Bar--------------------------------*/
+
+.search-bar-results-box{
+/*	border-color: black;
+	border-style:solid;
+	border-radius: 20px;*/
+/*	height: 80px;*/
+	width: 30%;
+/*	margin-top: 140px;*/
+/*	margin-bottom:80px;*/
+	background-color: #F7F7F9;
+/*	clear:bottom;*/
+}
+
+#results-button{
+display: inline;
+width: 70px;
+height: 30px;
+}
+
+.search-div{
+	margin-top: 20px;
+}
+
+.getty-view{
+	/*margin-top: 300px;*/
+/*	display: inline;
+    margin: auto;*/
+    margin-bottom: 30px;
+}
+
+.youtube-view{
+	margin-bottom: 30px;
+}
+
+.title-view{
+	margin-top: 30px;
+	text-align: center;
+}
+
+.youtube-header-text{
+/*	margin-top: 30px;*/
 }
 
 /*----------------------------------Olahuli Contents CSS--------------------------------------*/
