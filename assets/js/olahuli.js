@@ -88,7 +88,7 @@ function search(){
 
 
 $(document).ready(function(event){
-  $(".add-search-data").bind("click", search);
+  $(".add-search-data").on("click", search);
 
   $(event).keypress(function(e){
 
