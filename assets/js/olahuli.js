@@ -1,5 +1,6 @@
 
 $(document).on("click", ".add-search-data", function(){
+<<<<<<< HEAD
   
   var input = $(".wiki-search-input").val().trim();
   // var gettyApi = "9pmqn85smrhhhx3wq5zjhgk7";
@@ -47,6 +48,13 @@ $(document).on("click", ".add-search-data", function(){
 // });
 
 
+=======
+  var input = $(".wiki-search-input").val().trim();
+  var gettyApi = "9pmqn85smrhhhx3wq5zjhgk7";
+  console.log(input);
+  var firstURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q="+ input +"&type=video&key=AIzaSyB4_u1AG7P6ykJ68p080pjfIpjjZk7SJP0";
+  var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=best&phrase=" + input;
+>>>>>>> 1c861e44b9c00e2a047d4bed67f088a02751515d
   $.ajax({
     url: thirdURL,
     method: "GET"
@@ -55,17 +63,39 @@ $(document).on("click", ".add-search-data", function(){
      console.log(thirdURL);
      $(".wiki-view").empty();
 
+<<<<<<< HEAD
     var newDiv = $("<div class ='col-xs-12 search-div'>");
      
  
       var title = response.parse.title;
       var content = response.parse.text["*"];
      
+=======
+    var newDiv = $("<div class='col-md-3' id ='youtube'>");
+    for(i = 0; i < response.items.length; i++){
+      var videos = response.items[i].id.videoId;
+      var vidTag = $("<iframe width='200' height='150' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
+      newDiv.append(vidTag);
+    }
+    $(".youtube-view").html(newDiv);
+    console.log(response);
+>>>>>>> 1c861e44b9c00e2a047d4bed67f088a02751515d
 
       newDiv.append(title);
       newDiv.append(content);
 
+<<<<<<< HEAD
     $(".wiki-view").append(newDiv);
+=======
+  }).done(function(response){
+    var newDiv = $("<div class='col-md-3' id='getty'>");
+    for(i = 0; i < 9; i++){
+      var image = response.images[i].display_sizes[0].uri;
+      var imageTag = $("<img width='200' height='150'>").attr("src", image);
+      newDiv.append(imageTag);
+    }
+    $(".getty-view").html(newDiv);
+>>>>>>> 1c861e44b9c00e2a047d4bed67f088a02751515d
     console.log(response);
   });
 
