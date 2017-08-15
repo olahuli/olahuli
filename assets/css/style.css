@@ -131,7 +131,27 @@ height: 30px;
 }
 
 .search-div{
-	margin-top: 100px;
+	margin-top: 20px;
+}
+
+.getty-view{
+	/*margin-top: 300px;*/
+/*	display: inline;
+    margin: auto;*/
+    margin-bottom: 30px;
+}
+
+.youtube-view{
+	margin-bottom: 30px;
+}
+
+.title-view{
+	margin-top: 30px;
+	text-align: center;
+}
+
+.youtube-header-text{
+/*	margin-top: 30px;*/
 }
 
 /*----------------------------------Olahuli Contents CSS--------------------------------------*/
