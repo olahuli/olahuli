@@ -138,7 +138,7 @@ function search(){
     for(i = 0; i < response.items.length; i++){
       var newDiv = $("<div class ='col-xs-3'>");
       var videos = response.items[i].id.videoId;
-      var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
+      var vidTag = $("<iframe width='250' height='200' class='videos' allowfullscreen> ").attr("src", "https://www.youtube.com/embed/" + videos);
       newDiv.append(vidTag);
 
     $(".youtube-view").append(newDiv);
