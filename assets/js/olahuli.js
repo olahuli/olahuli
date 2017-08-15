@@ -7,41 +7,6 @@ $(document).on("click", ".add-search-data", function(){
   var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=most_popular&phrase=" + input;
   var thirdURL="https://en.wikipedia.org/w/api.php?action=parse&origin=*&prop=text&format=json&redirects=1&page=" + input;
 
-  $.ajax({
-    url: thirdURL,
-    method: "GET"
-  }).done(function(response){
-     console.log(response);
-     console.log(thirdURL);
-     $(".wiki-view").empty();
-
-     var newDiv = $("<div class ='col-xs-12 search-div'>");
-
-
-     var title = response.parse.title;
-     var content = response.parse.text["*"];
-
-
-     newDiv.append(title);
-     newDiv.append(content);
-
-     $(".wiki-view").append(newDiv);
-     console.log(response);
-  });
-
-  $.ajax({
-    url: firstURL,
-    method: "GET"
-  }).done(function(response){
-    var newDiv = $("<div class='row' id ='youtube'>");
-    for(i = 0; i < response.items.length; i++){
-      var videos = response.items[i].id.videoId;
-      var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
-      newDiv.append(vidTag);
-    }
-    $(".youtube-view").html(newDiv);
-    console.log(response);
-  });
 
   $.ajax({
     url: secondURL,
@@ -59,6 +24,40 @@ $(document).on("click", ".add-search-data", function(){
     }
     $(".getty-view").html(newDiv);
     console.log(response);
+  });
+
+  $.ajax({
+    url: firstURL,
+    method: "GET"
+  }).done(function(response){
+    var newDiv = $("<div class='row' id ='youtube'>");
+    for(i = 0; i < response.items.length; i++){
+      var videos = response.items[i].id.videoId;
+      var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
+      newDiv.append(vidTag);
+    }
+    $(".youtube-view").html(newDiv);
+    console.log(response);
+  });
+
+    $.ajax({
+    url: thirdURL,
+    method: "GET"
+  }).done(function(response){
+     console.log(response);
+     console.log(thirdURL);
+     $(".wiki-view").empty();
+
+     var newDiv = $("<div class ='col-xs-12 search-div'>");
+
+     var title = response.parse.title;
+     var content = response.parse.text["*"];
+
+     newDiv.append(title);
+     newDiv.append(content);
+
+     $(".wiki-view").append(newDiv);
+     console.log(response);
   });
 
 });
