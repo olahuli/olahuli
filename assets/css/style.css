@@ -26,7 +26,7 @@ body {
 /*	border-radius: 20px;
 	border-color: black;
 	border-style:solid;*/
-	margin-bottom: 80px;
+	margin-bottom: 0px;
 
 
 }
@@ -66,9 +66,9 @@ body {
 /*-----------------------------Search Bar CSS--------------------------------------*/
 
 .search-bar-box{
-/*	border-color: black;
+	border-color: #939393;
 	border-style:solid;
-	border-radius: 20px;*/
+	/*border-radius: 20px;*/
 	height: 140px;
 	margin-bottom:80px;
 	background-color: #F7F7F9;
@@ -166,12 +166,13 @@ height: 30px;
   top:0;
   bottom: 0;
   right: 0;
-  min-height: 70px;
+  min-height: 30px;
 }
 
 .olahuli-contents{
 	margin-top: 60px;
 	height:600px;
+	background-image: url("../../assets/images/ohuli.jpg");
 
 }
 
