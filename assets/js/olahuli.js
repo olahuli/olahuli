@@ -16,6 +16,11 @@ $(document).on("click", ".add-search-data", function(){
     }
 
   }).done(function(response){
+
+    $(".getty-view").empty();
+    $(".getty-header-text").empty();
+
+    var headerElement = $("<h2>").text("Trending Images: ");
     
     for(i = 0; i < 8; i++){
       var newDiv = $("<div class ='col-xs-3'>");
@@ -25,6 +30,7 @@ $(document).on("click", ".add-search-data", function(){
     
     $(".getty-view").append(newDiv);
   }
+  $(".getty-header-text").append(headerElement);
     console.log(response);
   });
 
@@ -33,14 +39,20 @@ $(document).on("click", ".add-search-data", function(){
     method: "GET"
   }).done(function(response){
 
+    $(".youtube-view").empty();
+    $(".youtube-header-text").empty();
+
+    var headerElement = $("<h2>").text("Popular Videos: ");
+
     for(i = 0; i < response.items.length; i++){
-          var newDiv = $("<div class ='col-xs-3'>");
+      var newDiv = $("<div class ='col-xs-3'>");
       var videos = response.items[i].id.videoId;
       var vidTag = $("<iframe width='250' height='200' class='videos'>").attr("src", "https://www.youtube.com/embed/" + videos);
       newDiv.append(vidTag);
     
     $(".youtube-view").append(newDiv);
   }
+  $(".youtube-header-text").append(headerElement);
     console.log(response);
   });
 
@@ -50,18 +62,26 @@ $(document).on("click", ".add-search-data", function(){
   }).done(function(response){
      console.log(response);
      console.log(thirdURL);
-     $(".wiki-view").empty();
 
+     $(".wiki-view").empty();
+     $(".title-view").empty();
+     $(".wiki-header-text").empty();
+
+
+     var textElement = $("<h2>").text("Subject Information: ");
      var newDiv = $("<div class ='col-xs-12 search-div'>");
-     var headerDiv = $("<div class ='col-xs-3 title-div'>");
+     
      var title = response.parse.title;
+     var headerElement = $("<h1>").text(title);
      var content = response.parse.text["*"];
 
-     headerDiv.append(title);
+     // headerDiv.append(title);
+     console.log(title);
      newDiv.append(content);
 
+     $(".wiki-header-text").append(textElement);
      $(".wiki-view").append(newDiv);
-     $("#getty-container").prepend(headerDiv);
+     $(".title-view").append(headerElement);
      console.log(response);
   });
 
