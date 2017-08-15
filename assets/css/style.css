@@ -44,11 +44,11 @@ body {
 	margin-top: -80px;
 	height:500px;
 	font-style: "didot";
-	
+
 	background-image: url("../../assets/images/olahuli.logo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	
+
 }
 .page-sub-title{
 	width:100%;
@@ -80,7 +80,7 @@ body {
 	display: block;
 }
 
-.fa-search { 
+.fa-search {
 	vertical-align: middle;
 	position: relative;
 	top: 24px;
@@ -120,6 +120,8 @@ body {
 
 #results-button{
 display: inline;
+width: 70px;
+height: 30px;
 }
 
 /*----------------------------------Olahuli Contents CSS--------------------------------------*/

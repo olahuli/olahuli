@@ -1,10 +1,11 @@
 
 $(document).on("click", ".add-search-data", function(){
+
   var input = $(".wiki-search-input").val().trim();
   var gettyApi = "9pmqn85smrhhhx3wq5zjhgk7";
   console.log(input);
   var firstURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q="+ input +"&type=video&key=AIzaSyB4_u1AG7P6ykJ68p080pjfIpjjZk7SJP0";
-  var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=best&phrase=" + input;
+  var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=most_popular&phrase=" + input;
   $.ajax({
     url: firstURL,
     method: "GET"
@@ -38,6 +39,5 @@ $(document).on("click", ".add-search-data", function(){
     $(".getty-view").html(newDiv);
     console.log(response);
   });
-
 
 });
