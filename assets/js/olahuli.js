@@ -99,6 +99,36 @@ function search(){
 
   console.log(queryInput);
 
+
+  $.ajax({
+    url: thirdURL,
+    method: "GET"
+  }).done(function(response){
+     console.log(response);
+     console.log(thirdURL);
+
+     $(".wiki-view").empty();
+     $(".title-view").empty();
+     $(".wiki-header-text").empty();
+
+
+     var textElement = $("<h2>").text("Subject Information: ");
+     var newDiv = $("<div class ='col-xs-12 search-div'>");
+
+     var title = response.parse.title;
+     var headerElement = $("<h1>").text(title);
+     var content = response.parse.text["*"];
+
+     // headerDiv.append(title);
+     console.log(title);
+     newDiv.append(content);
+
+     $(".wiki-header-text").append(textElement);
+     $(".wiki-view").append(newDiv);
+     $(".title-view").append(headerElement);
+     console.log(response);
+  });
+
   $.ajax({
     url: secondURL,
     method: "GET",
@@ -147,34 +177,7 @@ function search(){
     console.log(response);
   });
 
-    $.ajax({
-    url: thirdURL,
-    method: "GET"
-  }).done(function(response){
-     console.log(response);
-     console.log(thirdURL);
 
-     $(".wiki-view").empty();
-     $(".title-view").empty();
-     $(".wiki-header-text").empty();
-
-
-     var textElement = $("<h2>").text("Subject Information: ");
-     var newDiv = $("<div class ='col-xs-12 search-div'>");
-
-     var title = response.parse.title;
-     var headerElement = $("<h1>").text(title);
-     var content = response.parse.text["*"];
-
-     // headerDiv.append(title);
-     console.log(title);
-     newDiv.append(content);
-
-     $(".wiki-header-text").append(textElement);
-     $(".wiki-view").append(newDiv);
-     $(".title-view").append(headerElement);
-     console.log(response);
-  });
 
 
 
