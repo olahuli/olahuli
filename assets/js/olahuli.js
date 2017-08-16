@@ -7,6 +7,8 @@ function search(){
   var secondURL = "https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=most_popular&phrase=" + input;
   var thirdURL="https://en.wikipedia.org/w/api.php?action=parse&origin=*&prop=text&format=json&redirects=1&page=" + input;
 
+//------------------------------------Getty API---------------------------
+
   $.ajax({
     url: secondURL,
     method: "GET",
@@ -33,6 +35,8 @@ function search(){
     console.log(response);
   });
 
+  //------------------------------------Youtube API---------------------------
+
   $.ajax({
     url: firstURL,
     method: "GET"
@@ -54,6 +58,8 @@ function search(){
   $(".youtube-header-text").append(headerElement);
     console.log(response);
   });
+
+//------------------------------------Wiki API---------------------------
 
     $.ajax({
     url: thirdURL,
@@ -86,7 +92,7 @@ function search(){
 
 };
 
-
+//----Copy of API Data for search button to work from one Index to another--------
 
   var placeHolderInput= window.location.href.split("#");
   var queryInput = placeHolderInput[1].replace(/ /g, '+');
@@ -98,7 +104,7 @@ function search(){
 
 
   console.log(queryInput);
-
+//------------------------------------Wiki API---------------------------
 
   $.ajax({
     url: thirdURL,
@@ -129,6 +135,8 @@ function search(){
      console.log(response);
   });
 
+  //------------------------------------Getty API---------------------------
+
   $.ajax({
     url: secondURL,
     method: "GET",
@@ -155,6 +163,8 @@ function search(){
     console.log(response);
   });
 
+  //------------------------------------Youtube API---------------------------
+
   $.ajax({
     url: firstURL,
     method: "GET"
@@ -177,11 +187,7 @@ function search(){
     console.log(response);
   });
 
-
-
-
-
-
+//-----Code for user input to work on enter press-----------------------
 
 $(document).ready(function(event){
   $(".add-search-data").on("click", search);
@@ -195,3 +201,24 @@ $(document).ready(function(event){
   });
 
 });
+
+//------------------------------------Modal Javascript---------------------------
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Get the modal
+var login = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == login) {
+        login.style.display = "none";
+    }
+}
