@@ -2,8 +2,6 @@
 
 ### By Garrett Moore, Josiah Jodelat, and Patrick Hustad
 
-## Deployed Here: http://www.olahuli.com/
-
 # Inspiration
 What is the first website you use when looking for quick information on a subject? Is it WikiPedia? Google Images? Maybe YouTube? For us it is all three! When it comes to looking something up on Wikipedia, we found that we were always wanting just a little bit more in terms of related information on the subject. By combining Wikipedia, YouTube, and Getty Images API's, we were able to create an application where a user has access to just the right amount of information all in one place.
 
